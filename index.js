@@ -20,18 +20,18 @@ const links = {
 };
 
 app.post('/topic', (req, res) => {
-        const topic = req.body.topic;
-        const link = links[topic];
-        if (link) {
-            res.send(link);
-        } else {
-            res.send('No link found for this topic');
-        }
+    const topic = req.body.topic;
+    const link = links[topic];
+    if (link) {
+        res.send(link);
+    } else {
+        res.send('No link found for this topic');
     }
+}
 );
 
 app.listen(3000, () => {
-        console.log('Server is running on port 3000');
-    }
+    console.log('Server is running on port 3000');
+}
 );
 
