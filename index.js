@@ -1,6 +1,11 @@
 import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
 
 const links = {
     overthinking: 'https://youtu.be/Atv2nCqTJDE?si=0bmNB0x-cLcmHO-Q',
