@@ -24,9 +24,9 @@ app.post('/topic', (req, res) => {
     const topic = req.body.topic;
     const link = links[topic];
     if (link) {
-        res.send(link);
+        res.send({status: 200, link});
     } else {
-        res.send('No link found for this topic');
+        res.send({status: 400, message: 'No link found for this topic'});
     }
 }
 );
